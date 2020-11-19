@@ -25,8 +25,8 @@ abstract class Player
     }
 
     public function drawCard(){
-        $pickedCard = $this->pickACard;
-        /*$this->points = $pickedCard->value;*/
-        return $pickedCard->getValue();
+
+        $pickedCard[] = $this->pickACard;
+        return $this->cards = $pickedCard;
     }
 }
