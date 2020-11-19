@@ -1,0 +1,16 @@
+{
+    "name": "vendor/blackjack",
+    "authors": [
+        {
+            "name": "teyz",
+            "email": "contact@bastienrigaud.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "core\\": "core/" }
+    },
+    "require": {},
+    "require-dev": {
+        "symfony/var-dumper": "^5.1"
+    }
+}
