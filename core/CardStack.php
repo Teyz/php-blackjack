@@ -4,18 +4,18 @@
 namespace core;
 
 
-class CardStack extends Card
+class CardStack
 {
-    private $cardStack = [];
+    private $cardStack;
 
     public function __construct()
     {
-        for ($i = 0; $i <= 9; $i++) {
-            $this->cardStack[i] = rand(1, 13);
-        }
+        $cardStackFactory = new CardStackFactory();
+        $this->cardStack = $cardStackFactory->getCardStack();
+        shuffle($this->cardStack);
     }
 
-    public function shuffleCards(){
-        shuffle($this->cardStack);
+    public function getCardStack(){
+        dump($this->cardStack);
     }
 }
