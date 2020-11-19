@@ -4,7 +4,7 @@
 namespace core;
 
 
-class Bank
+class Bank extends Joueur
 {
 
 }
