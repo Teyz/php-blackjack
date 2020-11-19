@@ -7,7 +7,8 @@ abstract class Player
     protected $points;
     protected $cards;
     protected $nbCards;
-    protected $cardStack;
+    static $staticCardStack;
+    static $countPoints;
 
     public function __construct()
     {
@@ -15,7 +16,8 @@ abstract class Player
         $this->cards = array();
         $this->nbCards = 0;
         $cardStack = new CardStack();
-        $this->cardStack = $cardStack->getCardStack();
+        $countPoints = new CountPoints();
+        $this->staticCardStack = $cardStack->getCardStack();
     }
 
     public function drawCard(){
