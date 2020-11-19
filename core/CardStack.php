@@ -16,6 +16,15 @@ class CardStack
     }
 
     public function getCardStack(){
-        dump($this->cardStack);
+        return $this->cardStack;
+    }
+
+    public function pickACard(){
+        $cardStackLength = sizeof($this->cardStack)-1;
+        $randomNumber = rand (0, $cardStackLength);
+        $cardPicked = $this->cardStack[$randomNumber];
+        unset($this->cardStack[$randomNumber]);
+        $this->cardStack = array_values($this->cardStack);
+        return $cardPicked;
     }
 }
