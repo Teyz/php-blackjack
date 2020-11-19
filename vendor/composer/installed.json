@@ -62,20 +62,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -144,20 +130,6 @@
             "polyfill",
             "portable",
             "shim"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     },
     {
@@ -231,20 +203,6 @@
         "keywords": [
             "debug",
             "dump"
-        ],
-        "funding": [
-            {
-                "url": "https://symfony.com/sponsor",
-                "type": "custom"
-            },
-            {
-                "url": "https://github.com/fabpot",
-                "type": "github"
-            },
-            {
-                "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                "type": "tidelift"
-            }
         ]
     }
 ]

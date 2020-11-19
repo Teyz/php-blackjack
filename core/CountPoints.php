@@ -11,7 +11,11 @@ class CountPoints
         $sizeCardStack = sizeof($cardStack) -1;
         for($i = 0; $i <= $sizeCardStack; $i++){
             if(get_class($cardStack[$i]) === "Card"){
-                $totalPoint += $cardStack[$i]->value;
+                if($cardStack[$i]->getValue() >=10){
+                    $totalPoint += 10;
+                } else {
+                    $totalPoint += $cardStack[$i]->getValue();
+                }
             } else{
                 if($totalPoint >= 0 && $totalPoint<=10){
                     $totalPoint += 11;

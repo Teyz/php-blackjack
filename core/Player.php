@@ -16,11 +16,21 @@ abstract class Player
         $this->cards = array();
         $this->nbCards = 0;
         $cardStack = new CardStack();
-        $countPoints = new CountPoints();
+        $this->countPoints = new CountPoints();
         $this->staticCardStack = $cardStack->getCardStack();
     }
 
     public function drawCard(){
 
+    }
+
+    public function getPoints(){
+        return $this->countPoints->CountPoints($this->cards);
+    }
+
+    public function getFirstRoundsCards(){
+        for($i = 0; $i <= 1; $i++){
+            array_push($this->cards, $this->cardStack->pickACard());
+        }
     }
 }
