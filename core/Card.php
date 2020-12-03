@@ -14,4 +14,20 @@ class Card
         $this->family = $cardFamily;
         $this->value = $cardValue;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getFamily()
+    {
+        return $this->family;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getValue()
+    {
+        return $this->value;
+    }
 }

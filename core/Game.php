@@ -4,6 +4,7 @@ class Game{
     private $playerOne;
     private $playerTwo;
     private $isFirstRound;
+    private $isFinished;
 
     public function __construct()
     {
@@ -12,25 +13,14 @@ class Game{
         $this->isFirstRound = true;
     }
 
-    public function gamblerTurn()
-    {
-        $drawnewcard = (string)readline('Voulez vous tirer une carte ? ( yes / no ) ');
-        if ($drawnewcard === 'yes'){
-            echo 'je tire une carte';
-            drewcard();
-        } elseif ($drawnewcard === 'no'){
-            echo 'tour de la banque';
-        } else {
-            echo "Veuillez répondre 'yes' ou 'no'";
-            gamblerTurn();
-        }
-    }
-
     public function game(){
         if($this->isFirstRound){
             $this->playerOne->getFirstRoundsCards();
             $this->playerTwo->getFirstRoundsCards();
             $this->isFirstRound = false;
+        }
+        while(!$this->isFinished){
+            $this->playerTwo->choose();
         }
     }
 }
